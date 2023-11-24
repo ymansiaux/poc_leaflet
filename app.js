@@ -1,6 +1,6 @@
-// $(document).ready(function() {
-//     console.log('ready!');
-// });
+// faire une carte où on attend de récupérer des données
+// et où on peut changer le zoom
+
 var map = L.map('map').setView([51.505, -0.09], 13);
 
 L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -21,44 +21,6 @@ function onMapClick(e) {
 
 map.on('click', onMapClick);
 
-
-var waitForEl = function (selector, callback) {
-    if (jQuery(selector).length) {
-      callback();
-    } else {
-      setTimeout(function () {
-        waitForEl(selector, callback);
-      }, 100);
-    }
-  };
-
-
-//   waitForEl(
-//     "#amount", () => {
-//         getCurrentZoom();
-//         getCurrentZoom().on('change', function () {
-//             console;log()
-//             $("#amount").val();
-//           });
-//     }
-//   );
-
-
-$('#rangeInput[type=range]').on('change', function () {
-    console.log('rangeInput');
-})
-
-$('input[type=range]').on('change', function () {
-    console.log("change");
-    $(this).trigger('change');
-});
-
-// function getCurrentZoom() {
-//     console.log($("#amount").val());
-//     parseInt($("#amount").val());
-// }
-
-
-  function changeZoom(a) {
-    map.setZoom(a); 
-  }
+function changeZoom(a) {
+    map.setZoom(a);
+}
