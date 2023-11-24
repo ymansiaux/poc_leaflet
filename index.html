@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leaflet Map App</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <style>
+        #map {
+            height: 400px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Leaflet Map App</h1>
+    <h2>Coucou</h2>
+    <div id="map"></div>
+    <script src="app.js"></script>
+
+    <input type="range" id="rangeInput" name="rangeInput" min="0" max="20" value="0"
+        oninput="amount.value=rangeInput.value" , onchange="changeZoom(parseInt(this.value))">
+
+    <output id="amount" name="amount" for="rangeInput">0</output>
+
+</body>
+
+</html>
